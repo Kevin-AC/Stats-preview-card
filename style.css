@@ -1,0 +1,123 @@
+:root{
+    --Verydarkblue : hsl(233, 47%, 7%); /*(main background)*/
+    --Darkdesaturatedblue : hsl(244, 38%, 16%); /*(card background)*/
+    --Softviolet : hsl(277, 64%, 61%); /*(accent)*/
+
+    --White : hsl(0, 0%, 100%); /*(main heading, stats)*/
+    --Slightlytransparentwhite : hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+    --Slightlytransparentwhite2 : hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+    --layer: rgba(110,30,160,0.7);
+    --Inter: 'Inter', sans-serif;
+    --Lexend: 'Lexend Deca', sans-serif;
+} 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body{
+    font-size: 15px;
+    min-height: 100vh;
+    display: grid;
+    place-content: center ;
+    font-family: var(--Inter);
+    background-color: var(--Verydarkblue);
+}
+
+.container{
+    width: 328px;
+    height: 788px;
+    margin-top: 1.25rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+   
+}
+.container__img__fondo{
+    width: 100%;
+    height: 234px;
+    background-image: url(./images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:var(--layer);
+    background-blend-mode: soft-light;
+}
+
+.container__principal{
+    background-color: var(--Darkdesaturatedblue);
+    color: var(--White);
+    text-align: center;
+    padding: 2.5rem 2.1rem;
+}
+
+h1{
+    color: var(--White);
+    font-size: 1.7rem;
+    font-family: var(--Inter);
+    height: 115px;
+}
+span{
+    color: var(--Softviolet);
+}
+p{
+    color: var(--Slightlytransparentwhite);
+    line-height: 1.6rem;
+    height: 137px;
+}
+.container__stast{
+    line-height: 1.6rem;
+    color: var(--Slightlytransparentwhite2);
+}
+.monto{
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+.concepto{
+    text-transform: uppercase;
+    font-size:0.75rem;
+    margin-bottom: 1.8rem;
+}
+.last{
+    text-transform: uppercase;
+}
+
+@media(min-width:768px){
+    .container{
+        width: 1110px;
+        height: 448px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .container__img__fondo{
+        width: 540px;
+        height: 100%;
+        background-image: url(./images/image-header-desktop.jpg);
+
+    }
+    .container__principal{
+        padding: 4.7rem 4.4rem;
+        text-align: left;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    p{
+        margin-right: 4.375rem;
+    }
+    .container__stast{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 4.375rem;
+        
+    }
+
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    color: var(--White);
+    margin-bottom: 50px;
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
