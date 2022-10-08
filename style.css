@@ -81,7 +81,7 @@ p{
     text-transform: uppercase;
 }
 
-@media(min-width:768px){
+@media(min-width:992px){
     .container{
         width: 1110px;
         height: 448px;
